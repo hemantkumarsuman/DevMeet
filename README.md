@@ -7,5 +7,23 @@
 - Install tailwind for "vite + react" project
 - Install DaisyUi(It is component design Library compatible with TailwindCSS)
 - Add navbar component from daisyUi in App.jsx
+- create Navbar.jsx component
+- Install react-router-dom
+  NOTE: We will use "react router" component for routing instead of createBrowserRoute in this project
+- Create BrowserRouter > Routes > Route > RouteChildren
+- Create an Outlet in Body Component
+- Create Footer
 
+
+
+
+# Structure of project
+  
+  Body.jsx
+    Navbar.jsx
+        Route /login
+        Route /profile
+        .
+        .
+        .
 
