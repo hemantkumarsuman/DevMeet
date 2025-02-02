@@ -21,7 +21,7 @@
 
 
 
-# Structure of project
+# Basic Structure of project
   
   Body.jsx
     Navbar.jsx
