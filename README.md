@@ -13,6 +13,10 @@
 - Create BrowserRouter > Routes > Route > RouteChildren
 - Create an Outlet in Body Component
 - Create Footer
+- Login Page => We will use AXIOS library for API call
+- Install Axios library
+- handle CORS => install npm cors in backend code => add middleware with configuarations : origin, credential:true
+- Whenever you are making an API call from frontend using AXIOS pass extra property in AXIOS as {withCredential:true}
 
 
 
