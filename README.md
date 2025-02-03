@@ -17,6 +17,9 @@
 - Install Axios library
 - handle CORS => install npm cors in backend code => add middleware with configuarations : origin, credential:true
 - Whenever you are making an API call from frontend using AXIOS pass extra property in AXIOS as {withCredential:true}
+- Install redux toolkit
+- Install react-redux
+- create store using configureStore[appStore.js] => ADD provider to [app.js] => createSlice[userSlice.js] => add reducer to store
 
 
 
