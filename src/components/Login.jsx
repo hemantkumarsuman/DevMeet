@@ -1,19 +1,29 @@
 import axios from 'axios';
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux';
+import { addUser } from '../utils/userSlice';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
 
-  const [emailId, setEmailId] = useState('');
-  const [password, setPassword] = useState('');
+  const [emailId, setEmailId] = useState('hemant16@gmail.com');
+  const [password, setPassword] = useState('Hemant16@');
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleLoginClick =async ()=>{
     try{
-      const res = axios('',{
+      const res =await axios.get('https://dummyjson.com/users',{
         emailId,
         password
       },{
         withCredential: true
       });
+      console.log(res.data.users);
+            
+      dispatch(addUser(res.data.users));
+      return navigate('/')
     }
 
     catch(e){
@@ -43,7 +53,7 @@ const Login = () => {
             </label>
           </div>
           <div className="card-actions justify-center">
-            <button className="btn btn-primary my-6">Login</button>
+            <button className="btn btn-primary my-6" onClick={handleLoginClick}>Login</button>
           </div>
         </div>
       </div>

@@ -20,6 +20,9 @@
 - Install redux toolkit
 - Install react-redux
 - create store using configureStore[appStore.js] => ADD provider to [app.js] => createSlice[userSlice.js] => add reducer to store
+- Add redux devtool in Browser
+- See if data is coming properly in store
+- Navbar profile pic should update as soon as user Login => Navigate to Feed page
 
 
 
