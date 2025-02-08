@@ -15,7 +15,7 @@ const Body = () => {
   const fetchUser = async ()=>{
     try{
       const res = await axios.get('https://dummyjson.com/users');
-      console.log(res.data.users);
+      //console.log(res.data.users);
       
       dispatch(addUser(res.data.users));
     }

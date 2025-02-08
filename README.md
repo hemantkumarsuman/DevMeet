@@ -25,6 +25,7 @@
 - Navbar profile pic should update as soon as user Login => Navigate to Feed page
 - Feature: You should not be able to redirect to oyher routes without login.
 - Logout Feature
+- Feed
 
 
 
