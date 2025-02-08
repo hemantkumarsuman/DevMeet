@@ -1,9 +1,23 @@
-import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+import { removeUser } from "../utils/userSlice";
 
 const Navbar = () => {
 
-  const user = useSelector((store)=> store.user)
+  const user = useSelector((store)=> store.user);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+
+  const handleLogOut = ()=>{
+    try{
+      dispatch(removeUser());
+      navigate('/login');
+    }
+    catch(e){
+      console.error(e);      
+    }
+  }
 
   return (
     <div className="navbar bg-base-300">
@@ -32,7 +46,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li><a>Settings</a></li>
-              <li><a>Logout</a></li>
+              <li><a onClick={handleLogOut}>Logout</a></li>
             </ul>
           </div>
         </div>
