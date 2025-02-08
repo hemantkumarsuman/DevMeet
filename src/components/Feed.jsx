@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { addFeed } from '../utils/feedSlice'
+import UserCard from './UserCard';
 
 const Feed = () => {
 
@@ -12,7 +13,7 @@ const Feed = () => {
     if(feed) return;
 
     const res = await axios.get('https://dummyjson.com/users');
-    console.log(res.data.users);
+    //console.log(res.data.users);
     
     dispatch(addFeed(res.data.users));
   }
@@ -22,7 +23,10 @@ const Feed = () => {
   },[])
 
   return (
-    <div>Feed</div>
+    feed && (<div>
+      <UserCard user={feed[0]}/>
+    </div>
+    )
   )
 }
 
